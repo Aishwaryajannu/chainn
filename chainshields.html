@@ -36,7 +36,7 @@
     <meta name="robots" content="max-image-preview:large">
     <link rel="canonical" href="https://chainshields0.framer.website/">
     <meta property="og:url" content="https://chainshields0.framer.website/">
-   <style data-framer-css-ssr-minified=""
+    <style data-framer-css-ssr-minified=""
         data-framer-components="framer-lib-cursors-host framer-rmACa PropertyOverrides framer-R4zxn framer-11Hp4 framer-e0m82 framer-ILaaC framer-Y2Ovd framer-JozRh framer-k8lQH framer-A64r4 framer-wLVKX framer-dfTKg framer-mRrpC framer-lib-form-plain-text-input framer-bDi1l framer-jXJt9 framer-llEyi">
         html,
         body,
@@ -5238,6 +5238,7 @@ body, html {
     }
         }
         </style>
+
     
 </head>
 
@@ -6631,7 +6632,6 @@ body, html {
 
     <script>(() => { function u() { function n(t, e, i) { let r = document.createElement("a"); r.href = t, r.target = i, r.rel = e, document.body.appendChild(r), r.click(), r.remove() } function o(t) { if (this.dataset.hydrated) { this.removeEventListener("click", o); return } t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); if (!e) return; if (/Mac|iPod|iPhone|iPad/u.test(navigator.userAgent) ? t.metaKey : t.ctrlKey) return n(e, "", "_blank"); let r = this.getAttribute("rel") ?? "", c = this.getAttribute("target") ?? ""; n(e, r, c) } function a(t) { if (this.dataset.hydrated) { this.removeEventListener("auxclick", o); return } t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); e && n(e, "", "_blank") } function s(t) { if (this.dataset.hydrated) { this.removeEventListener("keydown", s); return } if (t.key !== "Enter") return; t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); if (!e) return; let i = this.getAttribute("rel") ?? "", r = this.getAttribute("target") ?? ""; n(e, i, r) } document.querySelectorAll("[data-nested-link]").forEach(t => { t instanceof HTMLElement && (t.addEventListener("click", o), t.addEventListener("auxclick", a), t.addEventListener("keydown", s)) }) } return u })()()</script>
     <script>(() => { function i() { for (let e of document.querySelectorAll("[data-framer-original-sizes]")) { let t = e.getAttribute("data-framer-original-sizes"); t === "" ? e.removeAttribute("sizes") : e.setAttribute("sizes", t), e.removeAttribute("data-framer-original-sizes") } } function a() { window.__framer_onRewriteBreakpoints = i } return a })()()</script>
-     <!-- //navbar for desktop -->
 <!-- //navbar for desktop -->
      <script>
     // Custom Navbar Replacement Script
@@ -7865,7 +7865,7 @@ initCustomForm();
 
         const video = document.createElement('video');
         video.id = 'fullscreen-video';
-        video.src = './assets/what-we-do.mp4';
+        video.src = './assets/What-We-Do.mp4';
         video.controls = true;
         video.preload = 'auto';
         video.controlsList = 'nodownload';
@@ -8664,8 +8664,8 @@ initCustomForm();
 
         function preloadVideos() {
             // Preload both desktop and mobile videos to make them appear faster
-            const desktopVideoUrls = ['./assets/hero.mp4'];
-            const mobileVideoUrls = ['./assets/hero-mobile.mp4'];
+            const desktopVideoUrls = ['./assets/Hero.mp4'];
+            const mobileVideoUrls = ['./assets/Hero-Mobile.mp4'];
             
             // Preload desktop videos
             desktopVideoUrls.forEach(url => {
@@ -8693,7 +8693,7 @@ initCustomForm();
                 desktopVideoContainer.className = 'desktop-fullscreen-video';
                 desktopVideoContainer.innerHTML = `
                     <video autoplay muted loop preload="auto">
-                        <source src="./assets/hero.mp4" type="video/mp4">
+                        <source src="./assets/Hero.mp4" type="video/mp4">
                         // <source src="./assets/hero.webm" type="video/webm">
                         Your browser does not support the video tag.
                     </video>
@@ -8768,7 +8768,7 @@ initCustomForm();
                         mobileVideoContainer.className = 'mobile-video-container';
                         mobileVideoContainer.innerHTML = `
                             <video autoplay muted loop preload="auto" style="width: 100%; height: 100%; object-fit: contain;">
-                                <source src="./assets/hero-mobile.mp4" type="video/mp4">
+                                <source src="./assets/Hero-Mobile.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         `;
@@ -9518,7 +9518,7 @@ initCustomForm();
                 
                 // Create logo container
                 const logoContainer = document.createElement('a');
-                logoContainer.href = '#';
+                logoContainer.href = 'https://chainshields.com';
                 logoContainer.className = 'chainshield-logo-container';
                 
                 // Create logo image
