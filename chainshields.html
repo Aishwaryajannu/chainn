@@ -36,7 +36,7 @@
     <meta name="robots" content="max-image-preview:large">
     <link rel="canonical" href="https://chainshields0.framer.website/">
     <meta property="og:url" content="https://chainshields0.framer.website/">
-    <style data-framer-css-ssr-minified=""
+   <style data-framer-css-ssr-minified=""
         data-framer-components="framer-lib-cursors-host framer-rmACa PropertyOverrides framer-R4zxn framer-11Hp4 framer-e0m82 framer-ILaaC framer-Y2Ovd framer-JozRh framer-k8lQH framer-A64r4 framer-wLVKX framer-dfTKg framer-mRrpC framer-lib-form-plain-text-input framer-bDi1l framer-jXJt9 framer-llEyi">
         html,
         body,
@@ -213,298 +213,7 @@
             } */
     
 
-        /* custom css for hero section video */
-              @media (min-width: 768px) {
-            /* Hide the original two-column section on desktop/tablet and set full height */
-            .framer-h4ya12[data-framer-name="2 Columns Text Image"] {
-                position: relative;
-                overflow: hidden;
-                min-height: 100vh !important;
-                height: 100vh !important;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            /* Hide original content and image on desktop/tablet */
-            .framer-h4ya12 .framer-14nk84u,
-            .framer-h4ya12 .framer-oheqim,
-            .framer-h4ya12 .framer-11k7jjt {
-                opacity: 0;
-                pointer-events: none;
-            }
-            
-            /* Create fullscreen video container */
-            .desktop-fullscreen-video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                background: #000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-            }
-            
-            .desktop-fullscreen-video video {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                min-height: 100vh;
-                object-position: center;
-            }
-            
-            /* Flexible text overlay container */
-            .desktop-video-overlay {
-                font-family: "Atyp TEST" !important;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: left;
-                color: white;
-                z-index: 2;
-                width: 90%;
-                max-width: 1200px;
-                padding: 0 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-            }
-            
-            .desktop-video-overlay h1 {
-                font-family: "Atyp TEST" !important;
-                font-size: clamp(28px, 4vw, 48px);
-                letter-spacing: 0.6px;
-                color: rgb(255, 255, 255);
-                margin-bottom: 20px;
-                line-height: 1.2;
-                max-width: 600px;
-                word-wrap: break-word;
-            }
-            
-            .desktop-video-overlay h2 {
-                font-family: "Atyp TEST" !important;
-                font-size: clamp(16px, 2vw, 20px);
-                font-weight: 100 !important;
-                letter-spacing: 1px;
-                line-height: 1.5em;
-                color: rgb(222, 222, 222);
-                margin-bottom: 30px;
-                max-width: 500px;
-                word-wrap: break-word;
-            }
-            
-            /* Multiple aggressive targeting to prevent Framer override */
-            .desktop-video-overlay h2,
-            .desktop-video-overlay h2 *,
-            .desktop-video-overlay h2 span,
-            .desktop-video-overlay .highlight {
-                font-weight: 100 !important;
-                font-family: "Atyp TEST" !important;
-            }
-            
-            /* Additional CSS to override any potential Framer classes */
-            .desktop-video-overlay h2[style*="font-weight"],
-            .desktop-video-overlay h2 span[style*="font-weight"] {
-                font-weight: 100 !important;
-                font-family: "Atyp TEST" !important;
-            }
-            
-            .desktop-video-overlay .highlight {
-                color: rgb(237, 237, 237);
-            }
-            
-            /* Flexible button styling */
-            .desktop-video-buttons {
-                display: flex;
-                gap: 15px;
-                justify-content: flex-start;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 100%;
-                max-width: 500px;
-            }
-            
-            .desktop-demo-button {
-                display: flex;
-                align-items: center;
-                background-color: rgb(134, 194, 50);
-                padding: 12px 16px;
-                border-radius: 50px;
-                text-decoration: none;
-                transition: all 0.3s ease;
-                gap: 12px;
-                color: rgb(255, 255, 255);
-                justify-content: center;
-                min-width: 160px;
-                flex-shrink: 0;
-            }
-            
-            .desktop-demo-button:hover {
-                background: rgb(81, 132, 10);
-                color: rgb(255, 255, 255);
-            }
-            
-            .desktop-demo-button .text {
-                font-size: clamp(14px, 1.5vw, 18px);
-                line-height: 150%;
-                margin: 0;
-                white-space: nowrap;
-            }
-            
-            .desktop-demo-button .icon {
-                width: 32px;
-                height: 32px;
-                background-color: rgb(10, 10, 10);
-                border: 1px solid rgb(25, 25, 25);
-                border-radius: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-shrink: 0;
-            }
-            
-            .desktop-demo-button .icon img {
-                width: 16px;
-                height: 16px;
-            }
-            
-            .desktop-learn-button {
-                display: flex;
-                align-items: center;
-                background-color: rgb(255, 255, 255);
-                padding: 12px 24px;
-                border-radius: 50px;
-                text-decoration: none;
-                transition: all 0.3s ease;
-                gap: 12px;
-                font-size: clamp(14px, 1.5vw, 18px);
-                line-height: 160%;
-                color: rgb(134, 194, 50);
-                margin: 0;
-                white-space: nowrap;
-                flex-shrink: 0;
-            }
-            
-            .desktop-learn-button:hover {
-                background: rgb(208, 210, 204);
-                color: rgb(134, 194, 50);
-            }
-        }
         
-        /* Tablet-specific adjustments */
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .desktop-video-overlay {
-                width: 95%;
-                padding: 0 15px;
-            }
-            
-            .desktop-video-overlay h1 {
-                font-size: clamp(24px, 5vw, 36px);
-                margin-bottom: 15px;
-            }
-            
-            .desktop-video-overlay h2 {
-                font-size: clamp(14px, 2.5vw, 18px);
-                margin-bottom: 25px;
-            }
-            
-            .desktop-video-buttons {
-                gap: 10px;
-            }
-            
-            .desktop-demo-button {
-                padding: 10px 14px;
-                min-width: 140px;
-            }
-            
-            .desktop-learn-button {
-                padding: 10px 20px;
-            }
-        }
-        
-        /* Large tablet landscape adjustments */
-        @media (min-width: 1024px) and (max-width: 1200px) {
-            .desktop-video-overlay {
-                width: 85%;
-                max-width: 1000px;
-            }
-            
-            .desktop-video-overlay h1 {
-                max-width: 550px;
-            }
-            
-            .desktop-video-overlay h2 {
-                max-width: 450px;
-            }
-        }
-        
-        /* Ultra-wide screen adjustments */
-        @media (min-width: 1400px) {
-            .desktop-video-overlay {
-                max-width: 1400px;
-            }
-            
-            .desktop-video-overlay h1 {
-                max-width: 700px;
-                font-size: clamp(36px, 3.5vw, 52px);
-            }
-            
-            .desktop-video-overlay h2 {
-                max-width: 600px;
-                font-size: clamp(18px, 1.8vw, 22px);
-            }
-        }
-        
-        /* Ensure mobile videos stay hidden on desktop/tablet */
-        @media (min-width: 768px) {
-            .mobile-video-container {
-                display: none !important;
-            }
-        }
-
-        /* Mobile and tablet - keep original layout */
-        @media (max-width: 1023px) {
-            .desktop-fullscreen-video,
-            .desktop-video-overlay {
-                display: none !important;
-            }
-            
-            /* Ensure original content is visible on mobile/tablet */
-            .framer-h4ya12 .framer-14nk84u,
-            .framer-h4ya12 .framer-oheqim,
-            .framer-h4ya12 .framer-11k7jjt {
-                opacity: 1 !important;
-                pointer-events: auto !important;
-            }
-            
-            /* Just hide the image and replace with video in the second section */
-            .framer-11k7jjt img {
-                display: none;
-            }
-            
-            .mobile-video-container {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-            }
-            
-             .mobile-video-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* Changed from cover to contain */
-        /* object-position: center; */
-        background-color: #060608; /* Add black background for letterboxing */
-    }
-        }
       
  /* Override Framer classes with !important */
 
@@ -4684,13 +4393,12 @@
 /* Success popup styling */
 .success-popup {
   position: fixed;
-  top: 20px;
+  top: 10%;
   right: 20px;
   background: #4CAF50;
   color: white;
   padding: 16px 20px;
   border-radius: 8px;
-  font-family: "Geist", "Geist Placeholder", sans-serif;
   font-size: 14px;
   font-weight: 500;
   box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
@@ -4865,7 +4573,7 @@ body, html {
         } */
         
         .footer-nav a.active {
-            color: #7ed321;
+            color: #86c232;
         }
         
         /* .footer-nav a::after {
@@ -4891,20 +4599,20 @@ body, html {
         }
         
         .footer-copyright p {
-            color:#7ed321;
+            color:#86c232;
             font-family: 'Instrument Sans', sans-serif;
             font-size: 14px;
             margin: 0;
         }
         
         .footer-copyright a {
-            color:#7ed321;
+            color:#86c232;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
         .footer-copyright a:hover {
-            color: #7ed321;
+            color: #86c232;
         }
         
         .footer-logo {
@@ -4925,9 +4633,10 @@ body, html {
         html body div .chainshields-footer .footer-logo .chainshields-logo-text * {
             font-family: 'OrbitronPrimary', 'OrbitronSecondary', 'Orbitron', 'Courier New', monospace !important;
             font-size: clamp(2rem, 8vw, 8rem) !important;
-            font-weight: 500 !important;
+            font-weight: 300 !important;
             color: #ffffff !important;
             margin: 0 !important;
+            width: 100% !important;
             letter-spacing: 2px !important;
             text-transform: uppercase !important;
             font-style: normal !important;
@@ -4943,9 +4652,10 @@ body, html {
         body .chainshields-footer .footer-logo h1.chainshields-logo-text,
         body .chainshields-footer .footer-container .footer-logo h1.chainshields-logo-text {
             font-family: 'OrbitronPrimary', 'OrbitronSecondary', 'Orbitron', 'Courier New', monospace !important;
-            font-weight: 500 !important;
+            font-weight: 300 !important;
             font-style: normal !important;
             letter-spacing: 2px !important;
+            width: 100% !important;
             text-transform: uppercase !important;
         }
         
@@ -4956,10 +4666,7 @@ body, html {
             width: 100%;
             height: 100%;
             opacity: 0.03;
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(126, 211, 33, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(126, 211, 33, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(126, 211, 33, 0.1) 0%, transparent 50%);
+            background: linear-gradient(180deg, #2f3030 1.7377202024470795%, #1c1c1c);
             pointer-events: none;
         }
         @media screen and (max-width: 768px) {
@@ -4992,8 +4699,9 @@ body, html {
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            max-width: 80vw;
-            width: 80vw;
+            max-width: 95vw;
+            width: auto;
+            min-width: 600px;
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -5011,23 +4719,45 @@ body, html {
             }
         }
 
+        .custom-navbar-logo-container {
+            cursor: pointer !important;
+            user-select: none !important;
+            pointer-events: auto !important;
+            flex-shrink: 0;
+        }
+
         .custom-navbar-logo {
             height: 40px;
             width: auto;
-            object-fit: contain;
+            cursor: pointer !important;
+            user-select: none !important;
+            pointer-events: auto !important;
+            padding-right: 50px !important;
+            transition: opacity 0.2s ease, transform 0.1s ease;
+        }
+
+        .custom-navbar-logo:hover {
+            opacity: 0.8;
+        }
+
+        .custom-navbar-logo:active {
+            opacity: 0.6;
+            transform: scale(0.98);
         }
 
         .custom-navbar-menu {
             display: flex;
-            /* gap: 12px; */
+            gap: 4px;
             align-items: center;
             list-style: none;
             margin: 0;
             padding: 0;
+            flex-wrap: nowrap;
         }
 
         .custom-navbar-item {
             position: relative;
+            flex-shrink: 0;
         }
 
         .custom-navbar-link {
@@ -5042,14 +4772,15 @@ body, html {
             transition: all 0.3s ease;
             display: block;
             border: 1px solid transparent;
+            white-space: nowrap;
         }
 
         /* .custom-navbar-link:hover {
             background-color: rgba(134, 194, 50, 0.1);
             border-color: rgba(134, 194, 50, 0.3);
-        }
+        } */
 
-        .custom-navbar-link.active {
+        /* .custom-navbar-link.active {
             background-color: rgba(134, 194, 50, 0.1);
             border-color: rgba(134, 194, 50, 0.3);
         } */
@@ -5065,32 +4796,448 @@ body, html {
             border-color: #75a82b;
         }
 
-        /* Mobile responsive adjustments */
-        @media screen and (max-width: 1024px) {
-            /* .custom-navbar-menu {
-                gap: 20px;
-            } */
+        /* Responsive breakpoints for better scaling */
+        
+        /* Large desktops (1400px and up) */
+        @media screen and (min-width: 1400px) {
+            .custom-navbar {
+                max-width: 80vw;
+                padding: 14px 28px;
+            }
+            
+            .custom-navbar-menu {
+                gap: 12px;
+            }
             
             .custom-navbar-link {
-                font-size: 8px;
+                font-size: 18px;
+                padding: 14px 28px;
+            }
+        }
+
+        /* Medium to large desktops (1200px to 1399px) */
+        @media screen and (max-width: 1399px) and (min-width: 1200px) {
+            .custom-navbar {
+                max-width: 85vw;
+                padding: 12px 24px;
+            }
+            
+            .custom-navbar-menu {
+                gap: 10px;
+            }
+            
+            .custom-navbar-link {
+                font-size: 17px;
+                padding: 12px 24px;
+            }
+        }
+
+        /* Standard desktops (1024px to 1199px) */
+        @media screen and (max-width: 1199px) and (min-width: 1024px) {
+            .custom-navbar {
+                max-width: 90vw;
+                padding: 10px 20px;
+            }
+            
+            .custom-navbar-menu {
+                gap: 6px;
+            }
+            
+            .custom-navbar-link {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            
+            .custom-navbar-logo {
+                height: 36px;
+            }
+        }
+
+        /* Small desktops and large tablets (900px to 1023px) */
+        @media screen and (max-width: 1023px) and (min-width: 900px) {
+            .custom-navbar {
+                max-width: 92vw;
+                padding: 8px 16px;
+                min-width: 500px;
+            }
+            
+            .custom-navbar-menu {
+                gap: 4px;
+            }
+            
+            .custom-navbar-link {
+                font-size: 15px;
+                padding: 8px 16px;
+            }
+            
+            .custom-navbar-logo {
+                height: 34px;
+            }
+        }
+
+        /* Tablets and small laptops (768px to 899px) */
+        @media screen and (max-width: 899px) and (min-width: 768px) {
+            .custom-navbar {
+                max-width: 95vw;
+                padding: 6px 12px;
+                min-width: 450px;
+            }
+            
+            .custom-navbar-menu {
+                gap: 2px;
+            }
+            
+            .custom-navbar-link {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            
+            .custom-navbar-logo {
+                height: 32px;
+            }
+        }
+
+        /* Extra small screens handling (just above mobile breakpoint) */
+        @media screen and (max-width: 800px) and (min-width: 768px) {
+            .custom-navbar {
+                min-width: 400px;
+                padding: 6px 10px;
+            }
+            
+            .custom-navbar-link {
+                font-size: 13px;
+                padding: 6px 10px;
+            }
+            
+            .custom-navbar-logo {
+                height: 30px;
+            }
+        }
+
+        /* Ensure navbar doesn't break on very wide screens */
+        @media screen and (min-width: 1600px) {
+            .custom-navbar {
+                max-width: 1200px;
+                padding: 16px 32px;
+            }
+            
+            .custom-navbar-menu {
+                gap: 16px;
+            }
+            
+            .custom-navbar-link {
+                font-size: 18px;
+                padding: 16px 32px;
+            }
+        }
+
+        /* Prevent text wrapping and maintain button integrity */
+        .custom-navbar-link {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Smooth transitions for all screen changes */
+        .custom-navbar,
+        .custom-navbar-link,
+        .custom-navbar-logo {
+            transition: all 0.3s ease;
+        }
+    </style>
+    <!-- /* custom css for hero section video */ -->
+    <style>
+              @media (min-width: 768px) {
+            /* Hide the original two-column section on desktop/tablet and set full height */
+            .framer-h4ya12[data-framer-name="2 Columns Text Image"] {
+                position: relative;
+                overflow: hidden;
+                min-height: 100vh !important;
+                height: 100vh !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Hide original content and image on desktop/tablet */
+            .framer-h4ya12 .framer-14nk84u,
+            .framer-h4ya12 .framer-oheqim,
+            .framer-h4ya12 .framer-11k7jjt {
+                opacity: 0;
+                pointer-events: none;
+            }
+            
+            /* Create fullscreen video container */
+            .desktop-fullscreen-video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            
+            .desktop-fullscreen-video video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                min-height: 100vh;
+                object-position: center;
+            }
+            
+            /* Flexible text overlay container */
+            .desktop-video-overlay {
+                font-family: "Atyp TEST" !important;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: left;
+                color: white;
+                z-index: 2;
+                width: 90%;
+                max-width: 1200px;
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            
+            .desktop-video-overlay h1 {
+                font-family: "Atyp TEST" !important;
+                font-size: clamp(28px, 4vw, 48px);
+                letter-spacing: 0.6px;
+                color: rgb(255, 255, 255);
+                margin-bottom: 20px;
+                line-height: 1.2;
+                max-width: 600px;
+                word-wrap: break-word;
+            }
+            
+            .desktop-video-overlay h2 {
+                font-family: "Atyp TEST" !important;
+                font-size: clamp(16px, 2vw, 20px);
+                font-weight: 100 !important;
+                letter-spacing: 1px;
+                line-height: 1.5em;
+                color: rgb(222, 222, 222);
+                margin-bottom: 30px;
+                max-width: 500px;
+                word-wrap: break-word;
+            }
+            
+            /* Multiple aggressive targeting to prevent Framer override */
+            .desktop-video-overlay h2,
+            .desktop-video-overlay h2 *,
+            .desktop-video-overlay h2 span,
+            .desktop-video-overlay .highlight {
+                font-weight: 100 !important;
+                font-family: "Atyp TEST" !important;
+            }
+            
+            /* Additional CSS to override any potential Framer classes */
+            .desktop-video-overlay h2[style*="font-weight"],
+            .desktop-video-overlay h2 span[style*="font-weight"] {
+                font-weight: 100 !important;
+                font-family: "Atyp TEST" !important;
+            }
+            
+            .desktop-video-overlay .highlight {
+                color: rgb(237, 237, 237);
+            }
+            
+            /* Flexible button styling */
+            .desktop-video-buttons {
+                display: flex;
+                gap: 15px;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                max-width: 500px;
+            }
+            
+            .desktop-demo-button {
+                display: flex;
+                align-items: center;
+                background-color: rgb(134, 194, 50);
+                padding: 12px 16px;
+                border-radius: 50px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                gap: 12px;
+                color: rgb(255, 255, 255);
+                justify-content: center;
+                min-width: 160px;
+                flex-shrink: 0;
+            }
+            
+            .desktop-demo-button:hover {
+                background: rgb(81, 132, 10);
+                color: rgb(255, 255, 255);
+            }
+            
+            .desktop-demo-button .text {
+                font-size: clamp(14px, 1.5vw, 18px);
+                line-height: 150%;
+                margin: 0;
+                white-space: nowrap;
+            }
+            
+            .desktop-demo-button .icon {
+                width: 32px;
+                height: 32px;
+                background-color: rgb(10, 10, 10);
+                border: 1px solid rgb(25, 25, 25);
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+            
+            .desktop-demo-button .icon img {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .desktop-learn-button {
+                display: flex;
+                align-items: center;
+                background-color: rgb(255, 255, 255);
+                padding: 12px 24px;
+                border-radius: 50px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                gap: 12px;
+                font-size: clamp(14px, 1.5vw, 18px);
+                line-height: 160%;
+                color: rgb(134, 194, 50);
+                margin: 0;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+            
+            .desktop-learn-button:hover {
+                background: rgb(208, 210, 204);
+                color: rgb(134, 194, 50);
+            }
+        }
+        
+        /* Tablet-specific adjustments */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .desktop-video-overlay {
+                width: 95%;
+                padding: 0 15px;
+            }
+            
+            .desktop-video-overlay h1 {
+                font-size: clamp(24px, 5vw, 36px);
+                margin-bottom: 15px;
+            }
+            
+            .desktop-video-overlay h2 {
+                font-size: clamp(14px, 2.5vw, 18px);
+                margin-bottom: 25px;
+            }
+            
+            .desktop-video-buttons {
+                gap: 10px;
+            }
+            
+            .desktop-demo-button {
+                padding: 10px 14px;
+                min-width: 140px;
+            }
+            
+            .desktop-learn-button {
                 padding: 10px 20px;
             }
         }
-
-        @media screen and (max-width: 900px) {
-            /* .custom-navbar-menu {
-                gap: 16px;
-            } */
+        
+        /* Large tablet landscape adjustments */
+        @media (min-width: 1024px) and (max-width: 1200px) {
+            .desktop-video-overlay {
+                width: 85%;
+                max-width: 1000px;
+            }
             
-            .custom-navbar-link {
-                font-size: 8px;
-                padding: 8px 16px;
+            .desktop-video-overlay h1 {
+                max-width: 550px;
+            }
+            
+            .desktop-video-overlay h2 {
+                max-width: 450px;
+            }
+        }
+        
+        /* Ultra-wide screen adjustments */
+        @media (min-width: 1400px) {
+            .desktop-video-overlay {
+                max-width: 1400px;
+            }
+            
+            .desktop-video-overlay h1 {
+                max-width: 700px;
+                font-size: clamp(36px, 3.5vw, 52px);
+            }
+            
+            .desktop-video-overlay h2 {
+                max-width: 600px;
+                font-size: clamp(18px, 1.8vw, 22px);
+            }
+        }
+        
+        /* Ensure mobile videos stay hidden on desktop/tablet */
+        @media (min-width: 768px) {
+            .mobile-video-container {
+                display: none !important;
             }
         }
 
-       
-    </style>
-
+        /* Mobile and tablet - keep original layout */
+        @media (max-width: 1023px) {
+            .desktop-fullscreen-video,
+            .desktop-video-overlay {
+                display: none !important;
+            }
+            
+            /* Ensure original content is visible on mobile/tablet */
+            .framer-h4ya12 .framer-14nk84u,
+            .framer-h4ya12 .framer-oheqim,
+            .framer-h4ya12 .framer-11k7jjt {
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+            
+            /* Just hide the image and replace with video in the second section */
+            .framer-11k7jjt img {
+                display: none;
+            }
+            
+            .mobile-video-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            
+             .mobile-video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Changed from cover to contain */
+        /* object-position: center; */
+        background-color: #060608; /* Add black background for letterboxing */
+    }
+        }
+        </style>
     
 </head>
 
