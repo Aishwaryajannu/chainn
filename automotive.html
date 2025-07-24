@@ -211,19 +211,19 @@
 
                 <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="chainshields.html" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="home">
+                    <a href="https://aishwaryajannu.github.io/chainn/chainshields.html" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="home">
                         <span class="framer-text">Home</span>
                     </a>
-                    <a href="chainshields.html#why-chainshields" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="why-chainshields">
+                    <a href="https://aishwaryajannu.github.io/chainn/chainshields.html#why-chainshields" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="why-chainshields">
                         <span class="framer-text">Why Chainshields</span>
                     </a>
-                    <a href="chainshields.html#what-we-do" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="what-we-do">
+                    <a href="https://aishwaryajannu.github.io/chainn/chainshields.html#what-we-do" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="what-we-do">
                         <span class="framer-text">What we do</span>
                     </a>
-                    <a href="chainshields.html#industries" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="industries">
+                    <a href="https://aishwaryajannu.github.io/chainn/chainshields.html#industries" class="text-gray-1100 hover:text-gray-900 transition-colors duration-200 font-medium" data-nav="industries">
                         <span class="framer-text">Industries</span>
                     </a>
-                    <a href="chainshields.html#connect-now" class="connect-btn" data-nav="connect-now">
+                    <a href="https://aishwaryajannu.github.io/chainn/chainshields.html#connect-now" class="connect-btn" data-nav="connect-now">
                         <span class="framer-text">Connect Now</span>
                     </a>
                 </div>
@@ -467,387 +467,387 @@
             }
         });
 
-        // Navigation script (keeping the original functionality)
-       (function() {
-    'use strict';
+//         // Navigation script (keeping the original functionality)
+//        (function() {
+//     'use strict';
     
-    // Configuration
-    const CONFIG = {
-        // Multiple possible main page files
-        mainPageFiles: ['chainshields.html', 'index.html', ''],
+//     // Configuration
+//     const CONFIG = {
+//         // Multiple possible main page files
+//         mainPageFiles: ['chainshields.html', 'index.html', ''],
         
-        // Increased timeouts for production
-        scrollDelay: 3000,
-        retryDelay: 5000,
-        maxRetries: 10
-    };
+//         // Increased timeouts for production
+//         scrollDelay: 3000,
+//         retryDelay: 5000,
+//         maxRetries: 10
+//     };
     
-    let retryCount = 0;
-    let navigationReady = false;
+//     let retryCount = 0;
+//     let navigationReady = false;
     
-    // Initialize with multiple fallbacks
-    function initWithRetry() {
-        if (navigationReady) return;
+//     // Initialize with multiple fallbacks
+//     function initWithRetry() {
+//         if (navigationReady) return;
         
-        try {
-            initNavigation();
-            navigationReady = true;
-            console.log('Navigation initialized successfully');
-        } catch (error) {
-            console.warn('Navigation init failed, retrying...', error);
-            retryCount++;
+//         try {
+//             initNavigation();
+//             navigationReady = true;
+//             console.log('Navigation initialized successfully');
+//         } catch (error) {
+//             console.warn('Navigation init failed, retrying...', error);
+//             retryCount++;
             
-            if (retryCount < CONFIG.maxRetries) {
-                setTimeout(initWithRetry, CONFIG.retryDelay);
-            } else {
-                console.error('Navigation failed after max retries');
-                initFallbackNavigation();
-            }
-        }
-    }
+//             if (retryCount < CONFIG.maxRetries) {
+//                 setTimeout(initWithRetry, CONFIG.retryDelay);
+//             } else {
+//                 console.error('Navigation failed after max retries');
+//                 initFallbackNavigation();
+//             }
+//         }
+//     }
     
-    // Main initialization
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initWithRetry);
-    } else {
-        initWithRetry();
-    }
+//     // Main initialization
+//     if (document.readyState === 'loading') {
+//         document.addEventListener('DOMContentLoaded', initWithRetry);
+//     } else {
+//         initWithRetry();
+//     }
     
-    function initNavigation() {
-        const currentPath = window.location.pathname;
-        const currentFile = currentPath.split('/').pop();
+//     function initNavigation() {
+//         const currentPath = window.location.pathname;
+//         const currentFile = currentPath.split('/').pop();
         
-        // Better main page detection for GitHub Pages
-        const isMainPage = CONFIG.mainPageFiles.includes(currentFile) ||
-                          currentPath.endsWith('/') ||
-                          currentPath === '/' ||
-                          !currentFile.includes('.') ||
-                          currentFile === '';
+//         // Better main page detection for GitHub Pages
+//         const isMainPage = CONFIG.mainPageFiles.includes(currentFile) ||
+//                           currentPath.endsWith('/') ||
+//                           currentPath === '/' ||
+//                           !currentFile.includes('.') ||
+//                           currentFile === '';
         
-        console.log('Navigation Debug:', {
-            currentPath,
-            currentFile,
-            isMainPage,
-            hostname: window.location.hostname
-        });
+//         console.log('Navigation Debug:', {
+//             currentPath,
+//             currentFile,
+//             isMainPage,
+//             hostname: window.location.hostname
+//         });
         
-        // Enhanced navigation configuration with multiple selectors
-        const navConfig = {
-            'home': {
-                selectors: [
-                    '[data-framer-name="2 Columns Text Image"]',
-                    '#home',
-                    '.hero-section',
-                    'header',
-                    'main > :first-child'
-                ],
-                sectionName: 'home'
-            },
-            'why-chainshields': {
-                selectors: [
-                    '[data-framer-name="Features Product"]',
-                    '#why-chainshields',
-                    '#features',
-                    '.features-section',
-                    '[id*="why"]',
-                    '[class*="feature"]'
-                ],
-                sectionName: 'why-chainshields'
-            },
-            'what-we-do': {
-                selectors: [
-                    '[data-framer-name="Services"]',
-                    '#what-we-do',
-                    '#services',
-                    '.services-section',
-                    '[id*="service"]',
-                    '[class*="service"]'
-                ],
-                sectionName: 'what-we-do'
-            },
-            'industries': {
-                selectors: [
-                    '[data-framer-name="Branding"]',
-                    '#industries',
-                    '#branding',
-                    '.industries-section',
-                    '[id*="industr"]',
-                    '[class*="industr"]'
-                ],
-                sectionName: 'industries'
-            },
-            'connect-now': {
-                selectors: [
-                    '[data-framer-name="Top"]',
-                    '#connect-now',
-                    '#contact',
-                    '.contact-section',
-                    'footer',
-                    '[id*="contact"]',
-                    '[class*="contact"]'
-                ],
-                sectionName: 'connect-now'
-            }
-        };
+//         // Enhanced navigation configuration with multiple selectors
+//         const navConfig = {
+//             'home': {
+//                 selectors: [
+//                     '[data-framer-name="2 Columns Text Image"]',
+//                     '#home',
+//                     '.hero-section',
+//                     'header',
+//                     'main > :first-child'
+//                 ],
+//                 sectionName: 'home'
+//             },
+//             'why-chainshields': {
+//                 selectors: [
+//                     '[data-framer-name="Features Product"]',
+//                     '#why-chainshields',
+//                     '#features',
+//                     '.features-section',
+//                     '[id*="why"]',
+//                     '[class*="feature"]'
+//                 ],
+//                 sectionName: 'why-chainshields'
+//             },
+//             'what-we-do': {
+//                 selectors: [
+//                     '[data-framer-name="Services"]',
+//                     '#what-we-do',
+//                     '#services',
+//                     '.services-section',
+//                     '[id*="service"]',
+//                     '[class*="service"]'
+//                 ],
+//                 sectionName: 'what-we-do'
+//             },
+//             'industries': {
+//                 selectors: [
+//                     '[data-framer-name="Branding"]',
+//                     '#industries',
+//                     '#branding',
+//                     '.industries-section',
+//                     '[id*="industr"]',
+//                     '[class*="industr"]'
+//                 ],
+//                 sectionName: 'industries'
+//             },
+//             'connect-now': {
+//                 selectors: [
+//                     '[data-framer-name="Top"]',
+//                     '#connect-now',
+//                     '#contact',
+//                     '.contact-section',
+//                     'footer',
+//                     '[id*="contact"]',
+//                     '[class*="contact"]'
+//                 ],
+//                 sectionName: 'connect-now'
+//             }
+//         };
         
-        // Function to find target element using multiple selectors
-        function findTargetElement(config) {
-            for (const selector of config.selectors) {
-                const element = document.querySelector(selector);
-                if (element) {
-                    console.log(`Found element with selector: ${selector}`);
-                    return element;
-                }
-            }
-            console.warn('No target element found for:', config.selectors);
-            return null;
-        }
+//         // Function to find target element using multiple selectors
+//         function findTargetElement(config) {
+//             for (const selector of config.selectors) {
+//                 const element = document.querySelector(selector);
+//                 if (element) {
+//                     console.log(`Found element with selector: ${selector}`);
+//                     return element;
+//                 }
+//             }
+//             console.warn('No target element found for:', config.selectors);
+//             return null;
+//         }
         
-        // Enhanced smooth scroll with better error handling
-        function smoothScrollTo(targetElement) {
-            if (!targetElement) return false;
+//         // Enhanced smooth scroll with better error handling
+//         function smoothScrollTo(targetElement) {
+//             if (!targetElement) return false;
             
-            try {
-                // Multiple scroll methods for better compatibility
-                if (targetElement.scrollIntoView) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                        inline: 'nearest'
-                    });
-                } else {
-                    // Fallback for older browsers
-                    const elementTop = targetElement.offsetTop;
-                    window.scrollTo({
-                        top: elementTop - 100, // Offset for fixed headers
-                        behavior: 'smooth'
-                    });
-                }
-                return true;
-            } catch (error) {
-                console.warn('Smooth scroll failed, using fallback:', error);
-                // Final fallback - instant scroll
-                targetElement.scrollIntoView();
-                return true;
-            }
-        }
+//             try {
+//                 // Multiple scroll methods for better compatibility
+//                 if (targetElement.scrollIntoView) {
+//                     targetElement.scrollIntoView({
+//                         behavior: 'smooth',
+//                         block: 'start',
+//                         inline: 'nearest'
+//                     });
+//                 } else {
+//                     // Fallback for older browsers
+//                     const elementTop = targetElement.offsetTop;
+//                     window.scrollTo({
+//                         top: elementTop - 100, // Offset for fixed headers
+//                         behavior: 'smooth'
+//                     });
+//                 }
+//                 return true;
+//             } catch (error) {
+//                 console.warn('Smooth scroll failed, using fallback:', error);
+//                 // Final fallback - instant scroll
+//                 targetElement.scrollIntoView();
+//                 return true;
+//             }
+//         }
         
-        // Enhanced navigation click handler
-        function handleNavClick(event, config, sectionName) {
-            event.preventDefault();
-            event.stopPropagation();
+//         // Enhanced navigation click handler
+//         function handleNavClick(event, config, sectionName) {
+//             event.preventDefault();
+//             event.stopPropagation();
             
-            console.log('Navigation clicked:', sectionName, 'isMainPage:', isMainPage);
+//             console.log('Navigation clicked:', sectionName, 'isMainPage:', isMainPage);
             
-            if (isMainPage) {
-                // Same page navigation
-                const targetElement = findTargetElement(config);
-                if (targetElement) {
-                    const scrolled = smoothScrollTo(targetElement);
-                    if (scrolled && history.pushState) {
-                        // Update URL without page reload
-                        const newUrl = `${window.location.origin}${window.location.pathname}#${sectionName}`;
-                        history.pushState(null, null, newUrl);
-                    }
-                } else {
-                    console.warn('Target element not found for section:', sectionName);
-                    // Fallback: try scrolling to any element with similar text content
-                    fallbackTextSearch(sectionName);
-                }
-            } else {
-                // Navigate to main page with hash
-                const mainPageUrl = determineMainPageUrl();
-                const targetUrl = `${mainPageUrl}#${sectionName}`;
-                console.log('Navigating to:', targetUrl);
-                window.location.href = targetUrl;
-            }
-        }
+//             if (isMainPage) {
+//                 // Same page navigation
+//                 const targetElement = findTargetElement(config);
+//                 if (targetElement) {
+//                     const scrolled = smoothScrollTo(targetElement);
+//                     if (scrolled && history.pushState) {
+//                         // Update URL without page reload
+//                         const newUrl = `${window.location.origin}${window.location.pathname}#${sectionName}`;
+//                         history.pushState(null, null, newUrl);
+//                     }
+//                 } else {
+//                     console.warn('Target element not found for section:', sectionName);
+//                     // Fallback: try scrolling to any element with similar text content
+//                     fallbackTextSearch(sectionName);
+//                 }
+//             } else {
+//                 // Navigate to main page with hash
+//                 const mainPageUrl = determineMainPageUrl();
+//                 const targetUrl = `${mainPageUrl}#${sectionName}`;
+//                 console.log('Navigating to:', targetUrl);
+//                 window.location.href = targetUrl;
+//             }
+//         }
         
-        // Determine correct main page URL for GitHub Pages
-        function determineMainPageUrl() {
-            const origin = window.location.origin;
-            const pathParts = window.location.pathname.split('/').filter(part => part);
+//         // Determine correct main page URL for GitHub Pages
+//         function determineMainPageUrl() {
+//             const origin = window.location.origin;
+//             const pathParts = window.location.pathname.split('/').filter(part => part);
             
-            // For GitHub Pages: https://username.github.io/repo-name/
-            if (window.location.hostname.includes('github.io')) {
-                if (pathParts.length > 0) {
-                    return `${origin}/${pathParts[0]}/`;
-                }
-            }
+//             // For GitHub Pages: https://username.github.io/repo-name/
+//             if (window.location.hostname.includes('github.io')) {
+//                 if (pathParts.length > 0) {
+//                     return `${origin}/${pathParts[0]}/`;
+//                 }
+//             }
             
-            return origin + '/';
-        }
+//             return origin + '/';
+//         }
         
-        // Fallback text search for missing elements
-        function fallbackTextSearch(sectionName) {
-            const keywords = {
-                'home': ['home', 'chainshields', 'protecting authenticity'],
-                'why-chainshields': ['why', 'features', 'benefits', 'blockchain'],
-                'what-we-do': ['what', 'services', 'how it works'],
-                'industries': ['industries', 'automotive', 'sectors'],
-                'connect-now': ['contact', 'connect', 'get in touch']
-            };
+//         // Fallback text search for missing elements
+//         function fallbackTextSearch(sectionName) {
+//             const keywords = {
+//                 'home': ['home', 'chainshields', 'protecting authenticity'],
+//                 'why-chainshields': ['why', 'features', 'benefits', 'blockchain'],
+//                 'what-we-do': ['what', 'services', 'how it works'],
+//                 'industries': ['industries', 'automotive', 'sectors'],
+//                 'connect-now': ['contact', 'connect', 'get in touch']
+//             };
             
-            const searchTerms = keywords[sectionName] || [sectionName];
+//             const searchTerms = keywords[sectionName] || [sectionName];
             
-            for (const term of searchTerms) {
-                const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, [class*="title"], [class*="heading"]');
-                for (const element of elements) {
-                    if (element.textContent.toLowerCase().includes(term.toLowerCase())) {
-                        console.log(`Fallback: Found element by text content: ${term}`);
-                        smoothScrollTo(element);
-                        return;
-                    }
-                }
-            }
-        }
+//             for (const term of searchTerms) {
+//                 const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, [class*="title"], [class*="heading"]');
+//                 for (const element of elements) {
+//                     if (element.textContent.toLowerCase().includes(term.toLowerCase())) {
+//                         console.log(`Fallback: Found element by text content: ${term}`);
+//                         smoothScrollTo(element);
+//                         return;
+//                     }
+//                 }
+//             }
+//         }
         
-        // Setup navigation with enhanced text matching
-        function setupNavigation() {
-            // Primary: Setup data-nav attribute links
-            const navLinks = document.querySelectorAll('a[data-nav]');
-            navLinks.forEach(function(link) {
-                const navType = link.getAttribute('data-nav');
-                const config = navConfig[navType];
+//         // Setup navigation with enhanced text matching
+//         function setupNavigation() {
+//             // Primary: Setup data-nav attribute links
+//             const navLinks = document.querySelectorAll('a[data-nav]');
+//             navLinks.forEach(function(link) {
+//                 const navType = link.getAttribute('data-nav');
+//                 const config = navConfig[navType];
                 
-                if (config) {
-                    link.addEventListener('click', function(e) {
-                        handleNavClick(e, config, config.sectionName);
-                    }, true);
-                    console.log('Navigation setup for data-nav:', navType);
-                }
-            });
+//                 if (config) {
+//                     link.addEventListener('click', function(e) {
+//                         handleNavClick(e, config, config.sectionName);
+//                     }, true);
+//                     console.log('Navigation setup for data-nav:', navType);
+//                 }
+//             });
             
-            // Secondary: Setup text-based navigation with better matching
-            const textMappings = {
-                'home': ['home'],
-                'why chainshields': ['why-chainshields'],
-                'chainshields': ['why-chainshields'],
-                'what we do': ['what-we-do'],
-                'how it works': ['what-we-do'],
-                'services': ['what-we-do'],
-                'industries': ['industries'],
-                'sectors': ['industries'],
-                'connect now': ['connect-now'],
-                'contact now': ['connect-now'],
-                'contact': ['connect-now'],
-                'get in touch': ['connect-now']
-            };
+//             // Secondary: Setup text-based navigation with better matching
+//             const textMappings = {
+//                 'home': ['home'],
+//                 'why chainshields': ['why-chainshields'],
+//                 'chainshields': ['why-chainshields'],
+//                 'what we do': ['what-we-do'],
+//                 'how it works': ['what-we-do'],
+//                 'services': ['what-we-do'],
+//                 'industries': ['industries'],
+//                 'sectors': ['industries'],
+//                 'connect now': ['connect-now'],
+//                 'contact now': ['connect-now'],
+//                 'contact': ['connect-now'],
+//                 'get in touch': ['connect-now']
+//             };
             
-            // Find all clickable elements
-            const clickableElements = document.querySelectorAll('a, button, [onclick], [role="button"]');
-            clickableElements.forEach(function(element) {
-                if (element.hasAttribute('data-nav')) return; // Skip already processed
+//             // Find all clickable elements
+//             const clickableElements = document.querySelectorAll('a, button, [onclick], [role="button"]');
+//             clickableElements.forEach(function(element) {
+//                 if (element.hasAttribute('data-nav')) return; // Skip already processed
                 
-                const text = element.textContent.trim().toLowerCase();
-                const href = element.getAttribute('href');
+//                 const text = element.textContent.trim().toLowerCase();
+//                 const href = element.getAttribute('href');
                 
-                // Skip external links and already processed elements
-                if (href && (href.startsWith('http') || href.startsWith('mailto'))) return;
+//                 // Skip external links and already processed elements
+//                 if (href && (href.startsWith('http') || href.startsWith('mailto'))) return;
                 
-                for (const [textPattern, configKeys] of Object.entries(textMappings)) {
-                    if (text.includes(textPattern)) {
-                        const configKey = configKeys[0];
-                        const config = navConfig[configKey];
+//                 for (const [textPattern, configKeys] of Object.entries(textMappings)) {
+//                     if (text.includes(textPattern)) {
+//                         const configKey = configKeys[0];
+//                         const config = navConfig[configKey];
                         
-                        if (config) {
-                            element.addEventListener('click', function(e) {
-                                handleNavClick(e, config, config.sectionName);
-                            }, true);
-                            console.log('Text-based navigation setup for:', text, '->', configKey);
-                            break;
-                        }
-                    }
-                }
-            });
-        }
+//                         if (config) {
+//                             element.addEventListener('click', function(e) {
+//                                 handleNavClick(e, config, config.sectionName);
+//                             }, true);
+//                             console.log('Text-based navigation setup for:', text, '->', configKey);
+//                             break;
+//                         }
+//                     }
+//                 }
+//             });
+//         }
         
-        // Setup navigation
-        setupNavigation();
+//         // Setup navigation
+//         setupNavigation();
         
-        // Handle hash navigation on page load with extended delay
-        if (isMainPage && window.location.hash) {
-            const hash = window.location.hash.substring(1);
-            console.log('Hash navigation requested:', hash);
+//         // Handle hash navigation on page load with extended delay
+//         if (isMainPage && window.location.hash) {
+//             const hash = window.location.hash.substring(1);
+//             console.log('Hash navigation requested:', hash);
             
-            setTimeout(function() {
-                const config = Object.values(navConfig).find(nav => nav.sectionName === hash);
-                if (config) {
-                    const targetElement = findTargetElement(config);
-                    if (targetElement) {
-                        smoothScrollTo(targetElement);
-                    } else {
-                        // Retry with longer delay
-                        setTimeout(() => {
-                            const retryElement = findTargetElement(config);
-                            if (retryElement) {
-                                smoothScrollTo(retryElement);
-                            } else {
-                                fallbackTextSearch(hash);
-                            }
-                        }, CONFIG.scrollDelay);
-                    }
-                }
-            }, 1000);
-        }
-    }
+//             setTimeout(function() {
+//                 const config = Object.values(navConfig).find(nav => nav.sectionName === hash);
+//                 if (config) {
+//                     const targetElement = findTargetElement(config);
+//                     if (targetElement) {
+//                         smoothScrollTo(targetElement);
+//                     } else {
+//                         // Retry with longer delay
+//                         setTimeout(() => {
+//                             const retryElement = findTargetElement(config);
+//                             if (retryElement) {
+//                                 smoothScrollTo(retryElement);
+//                             } else {
+//                                 fallbackTextSearch(hash);
+//                             }
+//                         }, CONFIG.scrollDelay);
+//                     }
+//                 }
+//             }, 1000);
+//         }
+//     }
     
-    // Fallback navigation for when main script fails
-    function initFallbackNavigation() {
-        console.log('Initializing fallback navigation');
+//     // Fallback navigation for when main script fails
+//     function initFallbackNavigation() {
+//         console.log('Initializing fallback navigation');
         
-        // Simple hash-based navigation
-        document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (!link) return;
+//         // Simple hash-based navigation
+//         document.addEventListener('click', function(e) {
+//             const link = e.target.closest('a');
+//             if (!link) return;
             
-            const href = link.getAttribute('href');
-            const text = link.textContent.trim().toLowerCase();
+//             const href = link.getAttribute('href');
+//             const text = link.textContent.trim().toLowerCase();
             
-            // Handle internal navigation
-            if (href === './' || href === '#' || href === '') {
-                e.preventDefault();
+//             // Handle internal navigation
+//             if (href === './' || href === '#' || href === '') {
+//                 e.preventDefault();
                 
-                // Simple text-based scrolling
-                if (text.includes('home')) {
-                    window.scrollTo(0, 0);
-                } else if (text.includes('why') || text.includes('features')) {
-                    scrollToSection(['#why-chainshields', '.features']);
-                } else if (text.includes('what') || text.includes('services')) {
-                    scrollToSection(['#what-we-do', '.services']);
-                } else if (text.includes('industries')) {
-                    scrollToSection(['#industries', '.industries']);
-                } else if (text.includes('contact') || text.includes('connect')) {
-                    scrollToSection(['#contact', 'footer']);
-                }
-            }
-        });
+//                 // Simple text-based scrolling
+//                 if (text.includes('home')) {
+//                     window.scrollTo(0, 0);
+//                 } else if (text.includes('why') || text.includes('features')) {
+//                     scrollToSection(['#why-chainshields', '.features']);
+//                 } else if (text.includes('what') || text.includes('services')) {
+//                     scrollToSection(['#what-we-do', '.services']);
+//                 } else if (text.includes('industries')) {
+//                     scrollToSection(['#industries', '.industries']);
+//                 } else if (text.includes('contact') || text.includes('connect')) {
+//                     scrollToSection(['#contact', 'footer']);
+//                 }
+//             }
+//         });
         
-        function scrollToSection(selectors) {
-            for (const selector of selectors) {
-                const element = document.querySelector(selector);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                    return;
-                }
-            }
-        }
-    }
+//         function scrollToSection(selectors) {
+//             for (const selector of selectors) {
+//                 const element = document.querySelector(selector);
+//                 if (element) {
+//                     element.scrollIntoView({ behavior: 'smooth' });
+//                     return;
+//                 }
+//             }
+//         }
+//     }
     
-    // Global error handler
-    window.addEventListener('error', function(e) {
-        console.warn('Navigation script error:', e.error);
-    });
+//     // Global error handler
+//     window.addEventListener('error', function(e) {
+//         console.warn('Navigation script error:', e.error);
+//     });
     
-    // Export for debugging
-    window.chainshieldsNav = {
-        initNavigation,
-        initFallbackNavigation,
-        retryCount: () => retryCount,
-        isReady: () => navigationReady
-    };
+//     // Export for debugging
+//     window.chainshieldsNav = {
+//         initNavigation,
+//         initFallbackNavigation,
+//         retryCount: () => retryCount,
+//         isReady: () => navigationReady
+//     };
     
-})();
+// })();
 
     </script>
 </body>
